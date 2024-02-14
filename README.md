@@ -14,3 +14,11 @@
 
 * Run tests
 >  docker-compose run --rm app sh -c "python manage.py test"
+
+
+____
+
+## Usage
+
+* Create superuser
+> docker-compose run --rm app sh -c "python manage.py createsuperuser"
