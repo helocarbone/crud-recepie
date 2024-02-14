@@ -8,7 +8,7 @@ from rest_framework import status
 CREATE_USER_URL = reverse('user:create')
 
 
-# aux function to create users
+"""aux function to create users"""
 def create_user(**params):
     return get_user_model().objects.create_user(**params)
 
@@ -21,7 +21,7 @@ class PublicUserApiTests(TestCase):
         payload = {
             'email': 'test@example.com',
             'password': 'teste1234',
-            'name': 'Test Name'
+            'name': 'Test Name',
         }
         response = self.client.post(CREATE_USER_URL, payload)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -33,7 +33,7 @@ class PublicUserApiTests(TestCase):
         payload = {
             'email': 'test@example.com',
             'password': 'teste1234',
-            'name': 'Test Name'
+            'name': 'Test Name',
         }
         create_user(**payload)
         response = self.client.post(CREATE_USER_URL, payload)
@@ -44,7 +44,7 @@ class PublicUserApiTests(TestCase):
         payload = {
             'email': 'test@example.com',
             'password': '1234',
-            'name': 'Test Name'
+            'name': 'Test Name',
         }
 
         response = self.client.post(CREATE_USER_URL, payload)
