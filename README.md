@@ -11,3 +11,6 @@
 
 * Run server
 > docker-compose up
+
+* Run tests
+>  docker-compose run --rm app sh -c "python manage.py test"
