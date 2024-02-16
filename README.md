@@ -1,6 +1,6 @@
 # crud-recepie
 
-## Dockerfile
+## Usage Commands
 * Start
 > docker-compose build
 * Drop
@@ -15,10 +15,9 @@
 * Run tests
 >  docker-compose run --rm app sh -c "python manage.py test"
 
-
-____
-
-## Usage
-
 * Create superuser
 > docker-compose run --rm app sh -c "python manage.py createsuperuser"
+
+
+## APIs Checking
+A swagger is running in http://127.0.0.1:8000/api/docs you can use it to play around
